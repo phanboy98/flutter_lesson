@@ -6,7 +6,7 @@ import 'package:ec_app/services/api_service.dart';
 import 'package:flutter/material.dart';
 
 class ProductDetail extends StatefulWidget {
-  static String routeName = "/home";
+  static String routeName = "/product-detail";
   final String sku;
   const ProductDetail({super.key, required this.sku});
 
@@ -36,7 +36,9 @@ class _ProductDetailState extends State<ProductDetail> {
           ),
         ),
       ),
-      bottomNavigationBar: const BottomNavigation(),
+      bottomNavigationBar: BottomNavigation(
+        productDetail: fetchProductDetail(),
+      ),
       body: SafeArea(
         child: SingleChildScrollView(
           child: FutureBuilder<ProductDetailData>(
