@@ -1,3 +1,4 @@
+import 'package:ec_app/screens/checkout/components/product_list.dart';
 import 'package:ec_app/screens/checkout/main.dart';
 import 'package:ec_app/screens/home/main.dart';
 import 'package:flutter/material.dart';
@@ -123,7 +124,9 @@ class _AccountState extends State<Account> {
                   height: 500,
                   child: const TabBarView(
                     children: [
-                      Text('test'),
+                      Expanded(
+                        child: CartProductList(),
+                      ),
                       Text('test'),
                     ],
                   ),
